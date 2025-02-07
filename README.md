@@ -1,1 +1,1 @@
-Rust Examples by Efe Çini
+Rust Examples from the book **The Rust Programming Language**
