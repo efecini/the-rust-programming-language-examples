@@ -65,7 +65,41 @@ fn main() {
     let a = [1, 2, 3, 4, 6];
     let b: [i32; 5] = [1, 2, 3, 4, 5];
     println!("{}", b[2]);
-    println!("{}", b[6]);
+    // println!("{}", b[6]); //index out of bonds
     let c = [1; 4]; // [1,1,1,1]
     println!("{:?}", c);
+    another_function(43, 'p');
+
+    //Expressions
+    //This is an expression.
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    println!("Y is {}", y);
+    println!("Five func returns: {}", five());
+
+    let number = 3;
+    // Conditional
+    if number < 5 {
+        println!("Condition was true.")
+    } else {
+        println!("Condition was false.")
+    }
+
+    // Using if in a let statement
+    let condition = true;
+    let number = if condition { 5 } else { 8 };
+    println!("Number is {number}");
+    loop {
+        println!("again and again");
+    }
+}
+
+fn another_function(x: i32, c: char) {
+    println!("Printed from another function. Int is {x} and char is {c}");
+}
+
+fn five() -> i32 {
+    5
 }
