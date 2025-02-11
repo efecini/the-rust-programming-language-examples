@@ -91,8 +91,30 @@ fn main() {
     let condition = true;
     let number = if condition { 5 } else { 8 };
     println!("Number is {number}");
+    /*
+    // Loops forever
     loop {
         println!("again and again");
+    }
+    */
+
+    // while
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+    while index < 5 {
+        println!("the value is {}", a[index]);
+        index += 1;
+    }
+    for element in a {
+        println!("The value is {element}");
+    }
+
+    // Countdown with for loop+rev
+    {
+        for number in (1..4).rev() {
+            println!("{number}!");
+        }
+        println!("LIFTOFF!!!!")
     }
 }
 
