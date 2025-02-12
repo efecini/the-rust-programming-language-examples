@@ -116,6 +116,11 @@ fn main() {
         }
         println!("LIFTOFF!!!!")
     }
+
+    let ss: &str = "Hello";
+    string_func(ss);
+    string_func(ss);
+    string_func(ss);
 }
 
 fn another_function(x: i32, c: char) {
@@ -124,4 +129,8 @@ fn another_function(x: i32, c: char) {
 
 fn five() -> i32 {
     5
+}
+
+fn string_func(s: &str) {
+    println!("{}", s);
 }
