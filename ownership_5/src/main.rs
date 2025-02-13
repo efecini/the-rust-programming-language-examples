@@ -61,8 +61,29 @@ fn main() {
     // Rule: If you have a mutable reference to a value, you can have no other references to that value.
     let mut s_62 = String::from("Hello 62");
     let r1 = &mut s_62;
-    let r2 = &mut s_62;
     println!("{r1}");
+    //let r2 = &mut s_62; //This will crash.
+
+    // Combining mutable and immutable references
+    let s = String::from("Hello");
+    let r1 = &s; //fine
+    let r2 = &s; //fine bc this is also an immutable reference.
+                 // let r3 = &mut s; // Big problem: Cannot borrow 's' as mutable since it is also borrowed as an immutable ref.
+                 // println!("{r1},{r3},{r3},"); Won't work
+
+    // Slices
+    // A string slice is a reference to part of a String.
+
+    let s_77 = String::from("hello world");
+    let hello = &s_77[0..5];
+    let world = &s_77[6..11];
+    println!("{}, {}, {}", s_77, hello, world);
+
+    //Example about string slices
+    let mut s_83 = String::from("Hello world");
+    let word = first_word(&s_83); // Immutable reference
+    s_83.clear(); //Error expected
+    println!("The first word is {word}");
 }
 
 fn takes_ownership(some_string: String) {
@@ -81,6 +102,17 @@ fn calculate_length(s1: String) -> (String, usize) {
 fn calculate_length_2(s: &String) -> usize {
     s.len()
 }
+
 fn change(some_string: &mut String) {
     some_string.push_str(", world !!!")
+}
+
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i]; //If we find the first blank char, return the prior slice
+        }
+    }
+    &s[..] //That means we couldn't find any blank so return the whole string
 }
