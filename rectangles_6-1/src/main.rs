@@ -24,7 +24,7 @@ fn main() {
     };
 
     println!("Area of the rectangle is {}.", rect1.area());
-    println!("Can Rec1 hold Rec2? {}", rect1.can_hold(&rect2));
+    println!("Can Rec1 hold Rec2? {}.", rect1.can_hold(&rect2));
 }
 
 fn area(width: u32, height: u32) -> u32 {
