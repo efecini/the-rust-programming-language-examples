@@ -1,0 +1,1 @@
+/Users/efecini/Projects/rust/the-rust-programming-language-examples/rectangles_6-1/target/debug/rectangles_6-1: /Users/efecini/Projects/rust/the-rust-programming-language-examples/rectangles_6-1/src/main.rs

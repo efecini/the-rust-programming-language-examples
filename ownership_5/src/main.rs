@@ -82,7 +82,7 @@ fn main() {
     //Example about string slices
     let mut s_83 = String::from("Hello world");
     let word = first_word(&s_83); // Immutable reference
-    s_83.clear(); //Error expected
+                                  // s_83.clear(); //Error! Since we can't
     println!("The first word is {word}");
 }
 
