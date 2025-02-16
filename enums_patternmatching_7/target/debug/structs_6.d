@@ -1,0 +1,1 @@
+/Users/efecini/Projects/rust/the-rust-programming-language-examples/enums_patternmatching_7/target/debug/structs_6: /Users/efecini/Projects/rust/the-rust-programming-language-examples/enums_patternmatching_7/src/main.rs
