@@ -54,7 +54,7 @@ fn main() {
 
     //Tuple Structs
     let black = Color(0, 0, 0);
-    let origin = origin(0, 0, 0);
+    let origin = Color(0, 0, 0);
 }
 
 fn build_user(email: String, username: String) -> User {
